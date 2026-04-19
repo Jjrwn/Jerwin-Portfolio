@@ -5,10 +5,12 @@ import { MdWavingHand } from "react-icons/md";
 
 export default function Home() {
   const badges = [
-    { label: "Express js", sub: "Learning" },
-    { label: "IT Graduate", sub: "2025" },
-    { label: "Projects", sub: "5+" },
-    { label: "Open to work", sub: "Junior roles & internships" },
+    { id: 1, label: "IT Graduate", sub: "2025" },
+    { id: 2, label: "Open to work", sub: "Junior roles & internships" },
+    { id: 3, label: "Soft Skill", sub: "Quick learner" },
+    { id: 4, label: "Soft Skill", sub: "Project management" },
+    { id: 5, label: "Soft Skill", sub: "Attention to detail" },
+    { id: 6, label: "Soft Skill", sub: "Team player" },
   ];
   return (
     <section className="min-h-screen flex flex-col">
@@ -79,24 +81,30 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden md:flex justify-center items-center">
-            <div className="relative">
+            <div className="relative w-80 h-80 ">
               {badges.map((b, i) => {
                 const positions = [
-                  "absolute -top-20 -right-3",
-                  "absolute bottom-10 left-1",
-                  "absolute -top-10 -right-50 translate-y-5",
-                  "absolute top-50 -left-10",
+                  "absolute -top-14 left-10",
+                  "absolute top-8 right-0",
+                  "absolute top-24 -left-10",
+                  "absolute bottom-10 right-30",
+                  "absolute -bottom-10 left-1/2",
+                  "absolute top-1/2 right-1/4",
                 ];
                 const delays = [
                   "",
+                  "[animation-delay:3s]",
                   "[animation-delay:2s]",
+                  "[animation-delay:3s]",
                   "[animation-delay:4s]",
+                  "[animation-delay:5s]",
+                  "[animation-delay:6s]",
                 ];
                 return (
                   <div
-                    key={b.label}
-                    className={`${positions[i]} bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-700 
-                                    rounded-2xl px-4 py-2 shadow-lg animate-float ${delays[i]}`}
+                    key={b.id}
+                    className={`${positions[i]} bg-white dark:bg-stone-900 border grid-row-2 border-stone-200 dark:border-stone-700 
+                              rounded-2xl px-4 py-2 shadow-lg animate-float ${delays[b.i]} `}
                   >
                     <p className="text-xs font-mono text-stone-500">
                       {b.label}
