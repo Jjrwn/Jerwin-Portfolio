@@ -10,6 +10,7 @@ import { FcTodoList } from "react-icons/fc";
 import { FiLogIn } from "react-icons/fi";
 import { HiMiniAcademicCap } from "react-icons/hi2";
 import { GiNewspaper } from "react-icons/gi";
+import { RiLoginCircleLine } from "react-icons/ri";
 
 export default function Projects() {
   const projects = [
@@ -106,6 +107,20 @@ export default function Projects() {
       demo: "https://news-pulse-blond.vercel.app/",
       learning:
         "API integration with NewsAPI, implementing rate limiting using Redis (Upstash), handling API responses and errors.",
+    },
+
+    {
+      name: "mern-login-system",
+      tech: "React, Node.js, Express, MongoDB, JWT, Nodemailer, Tailwind CSS",
+      desc: "A full-stack authentication system featuring user registration, JWT-based login, OTP email verification, and password reset flow.",
+      tags: ["Auth", "REST API", "OTP", "Full-Stack"],
+      category: "Full-Stack",
+      color: "from-indigo-500 to-blue-600",
+      icon: <RiLoginCircleLine />,
+      github: "https://github.com/Jjrwn/mern-login-system",
+      demo: "https://mern-login-system-pi.vercel.app",
+      learning:
+        "Built a complete auth flow including OTP generation, email delivery with Nodemailer, JWT token management, and protected routes on both the frontend and backend. Learned how to handle security concerns like timing attacks, rate limiting, and email enumeration prevention.",
     },
   ];
 
